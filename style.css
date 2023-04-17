@@ -1,15 +1,3 @@
-img.rotating_logo{
-width:1.8%;
-height:1.8%;
-animation: rotate_image 10s linear infinite;
-transform-origin: 50% 50%;
-}
-
-@keyframes rotate_image{
-  100% {
-  transform: rotate(360deg);
-	}
-}
 
 /* Global */
 
@@ -73,4 +61,129 @@ p {
 /* Universal tags */
 * {
 	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;  /*밑줄 없애기 */
+	color: var(--color-white);
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+button {
+  flex: 1 1 auto;
+	width: 15%;
+	height: 1%;
+  text-transform: uppercase;
+  font-size: var(--font-regular);
+  transition: 0.5s;
+  background-size: 100%;
+  color: white;
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+	border : none;
+}
+
+/* Navbar */
+#navbar {
+	display: flex;  /*수평축 메뉴바*/
+	justify-content: space-between;
+	align-items: center;
+	color: var(--color-white);
+	padding : 1%;
+}
+
+.nav__logo {
+	padding : 1.5%;
+	font-size : var(--font-medium);
+	font-weight: var(--weight-semi-bold);
+}
+
+.nav__logo>img.rotating_logo {
+	width:28px;
+	height:28px;
+	animation: rotate_image 10s linear infinite;
+	transform-origin: 50% 50%;
+	}
+	
+@keyframes rotate_image{
+	100% {
+	transform: rotate(360deg);
+	}
+}
+
+.navbar__menu {
+	display: flex;
+}
+
+.navbar__menu__item {
+	padding: 8px 12px;
+	margin : 0 4px;
+	white-space : nowrap;   /*줄바꿈 일어나지 않게*/
+	cursor : pointer;
+	border-radius: 5px;
+	transition: all 0.5s;
+}
+
+.navbar__menu__item:hover {
+	box-shadow: 1.3px 1.3px 1.3px 1.3px #8dbbf4;
+	color: rgb(30, 45, 244);
+	transform : translate(-3%, -3%);
+	/* background : linear-gradient(90deg, #95cdf0, #C5E5EE);
+	그라데이션은 transition 지원 안됨 */
+}
+
+/* Home */
+#background {
+	background-repeat: no-repeat;
+	background: url("imgs/home-background.png") center/cover no-repeat;
+	/* center/cover : 가운데에 두면서 반응형으로 */
+	/* position : absolute;
+	top : 0px;
+	left : 0px; */
+}
+
+#home {
+	padding : 20px;
+	text-align : center;
+}
+
+.home__avatar {
+	width:250px;
+	height:250px;
+	border-radius: 50%;
+	border: 2px solid var(--color-light-white)
+}
+
+.home__title, .home__description {
+	color : var(--color-white);
+}
+
+.home__contact {
+	flex: 1 1 auto;
+	cursor: pointer;
+  margin: 15px;
+  padding: 15px;
+	white-space : nowrap;   /*줄바꿈 일어나지 않게*/
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: gray;
+	font-weight: var(--weight-semi-bold);
+ /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+	background-image: linear-gradient(to right, #D7D7D7 0%, white 51%, #D7D7D7 100%);
+}
+.home__contact:hover { 
+	background-position: right center;
 }
