@@ -86,28 +86,14 @@ ul {
 	padding-left: 0;
 }
 
-button {
-	width: 15%;
-	height: 1%;
-  text-transform: uppercase;
-  font-size: var(--font-regular);
-  transition: 0.5s;
-  background-size: 100%;
-  color: white;
- /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
-  box-shadow: 0 0 20px #eee;
-  border-radius: 10px;
-	border : none;
-}
-
 /* Navbar */
 #navbar {
 	display: flex;  /*수평축 메뉴바*/
 	justify-content: space-between;
 	align-items: center;
 	color: var(--color-white);
-	padding : 1%;
-	margin : 10px;
+	margin-bottom: 30px;
+	font-size: 1.3em;
 }
 
 .nav__logo {
@@ -150,6 +136,16 @@ button {
 	그라데이션은 transition 지원 안됨 */
 }
 
+.navbar__toggle-btn {
+	position: absolute;
+	top : 24px;
+	right : 32px;
+	font-size: 24px;
+	border : none;
+	background: none;
+	display: none;
+}
+
 /* Home */
 #background {
 	background-repeat: no-repeat;
@@ -187,12 +183,13 @@ button {
 .home__contact {
 	font-size: 1.5vw;
 	cursor: pointer;
-  margin: 15px;
+  margin: 30px;
   padding: 15px;
 	white-space : nowrap;   /*줄바꿈 일어나지 않게*/
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
+	border : none;
   color: gray;
 	font-weight: var(--weight-semi-bold);
  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
@@ -223,8 +220,14 @@ button {
 /* About */
 .about__majors {
 	display: flex;
-	justify-content: space-between;
-	margin : 40px;
+	justify-content: space-around;
+	margin : 30px 150px 30px 150px;
+	flex-wrap : wrap;
+	padding : 0px 60px 0px 60px;
+}
+.major {
+	margin: auto;
+	padding : 30px;
 }
 
 .major__description {
@@ -257,7 +260,7 @@ button {
 .job {
 	display: flex;  /*1줄에 하나*/
 	align-items: center;
-	margin : 30px;
+	margin-left : 20%;
 	padding : 10px;	
 }
 
@@ -296,12 +299,14 @@ button {
 
 .skillset {
 	display: flex;  /*1줄에 하나*/
-	margin: 20px 0;
+	margin: 20px 40px;
+	padding : 20px;
 }
 
 .skillset__left {
 	flex-basis: 60%;
-	padding : 20px 40px;
+	padding : 20px 120px;
+	margin : 20px;
 }
 
 .skill {
@@ -332,7 +337,7 @@ button {
 	padding : 20px;
 }
 
-/*work*/
+/*project*/
 .fa-compact-disc {
 	position: relative;
 	right: 80px;
@@ -341,7 +346,7 @@ button {
 
 .work__projects {
 	display: flex;
-	margin: 40px;
+	margin: 10px 40px 40px 40px;
 	text-align: center;
 	justify-content: space-evenly;
 	flex-wrap : wrap;  /*반응형으로 좁아지면 한개씩 나옴*/
@@ -439,7 +444,6 @@ button {
 /*Testimonial*/
 #testimonials {
 	background: linear-gradient(90deg, #00c6ff, #0fb5c8);
-	color: white;
 }
 
 .testimonials {
@@ -449,6 +453,7 @@ button {
 
 .testimonial {
 	display: flex;
+	align-items: center;
 	margin : 32px 0;
 }
 
@@ -467,8 +472,16 @@ button {
 }
 /* 홀수일때 오른쪽에 40px 마진, 짝수일때 왼쪽에 마진 */
 
-.testimonial__speech-bubble img {
+.testimonial__speech-bubble{
 	padding : 18px;
+	width: 60%; 
+}
+
+.testimonial__speech-bubble p{
+	color: white;
+}
+
+.testimonial__speech-bubble img {
 	background-color: var(--color-white);
 	border-radius: 50%;
 }
@@ -500,10 +513,30 @@ button {
 }
 
 .contact__links i {
-	transition: all;
+	transition: all 0.2s;
 }
 
 .contact__links i:hover {
 	transform: scale(1.1);
 	color : var(--color-blue);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width:768px) {
+	.navbar__toggle-btn {
+		display: block; 
+	}
+	/* and 뒤에 반드시 한칸 뛰어야 작동됨! */
+
+	#navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar__menu {
+		flex-direction: column;
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
 }

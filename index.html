@@ -28,20 +28,23 @@
 				<li class="navbar__menu__item">Projects</li>
 				<li class="navbar__menu__item">Testimonials</li>
 				<li class="navbar__menu__item">Contact</li>
-			</ul>
+			</ul>		<!-- Toogle button -->
+			<button class="navbar__toggle-btn">
+				<i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+			</button> 
 		</nav>
 		<!-- Home -->
 		<section id="home">
 			<div class="home__line" style= "width: 40%; border-top:1.5px solid white;"></div>
 			<h1 class="home__title">Programmers, <br/> Sailing over innovation</h1>
 			<h2 class="home__description">We started here!</h2>
-			<button class="home__contact"><span>Contact Us</span></button>
+			<button class="home__contact"><span>Contact us</span></button>
 		</section>
 	</footer>
 		<!-- about -->
 	<section id="about" class="section section__container">
 		<h1>About us</h1>
-		<p>A team, greater than any other player.</p>
+		<h2>A team, greater than any other player.</h2>
 		<p>- VIA -</p>
 		<div class="about__majors">
 			<div class="major">
@@ -49,21 +52,21 @@
 					<i class="fa-brands fa-html5"></i>
 				</div>
 				<h2 class="major__title">Front-End</h2>
-				<p class="major__description">JavaScript, HTML, CSS, <br/>TypeScript</p>
+				<div class="major__description">JavaScript, HTML, CSS, <br/>TypeScript</div>
 			</div>
 			<div class="major">
 				<div class="major__icon">
 					<i class="fa-solid fa-mobile"></i>
 				</div>
 				<h2 class="major__title">Mobile</h2>
-				<p class="major__description">React Native, Java</p>
+				<div class="major__description">React Native, Java</div>
 			</div>
 			<div class="major">
 				<div class="major__icon">
 					<i class="fa-solid fa-server"></i>
 				</div>
 				<h2 class="major__title">Back-end</h2>
-				<p class="major__description">Python, NodeJS, MySQL</p>
+				<div class="major__description">Python, NodeJS, MySQL</div>
 			</div>
 		</div>
 		<div class="about__jobs">
@@ -169,7 +172,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- work -->
+	<!-- projects -->
 	<section id="work" class="section">	
 		<h1>Our Projects</h1>
 		<h3>In Progress</h3>
@@ -202,24 +205,26 @@
 	</section>
 	<!-- testimonials -->
 	<section id="testimonials"  class="section">
-		<h1 style="color: white;">Testimonials</h1>
-		<h3 style="color: white;">See what about us</h3>
-				<!-- H태그는 색상 상속 안됨 -->
-		<div class="testimonials">
-			<div class="testimonial">
-				<img src="imgs/testimonials/test1.png" alt="People" class="testimonial__avatar"/>
-				<div class="testimonial__speech-bubble">
-					<p>You have to keep plugging away. We are all growing. There is no shortcut. You have to put time into it to build an audience</p>
-					<p class="name"><a href="">John Gruber</a></p>
+		<div class="section__container">
+			<h1 style="color: white;">Testimonials</h1>
+			<h2 style="color: white;">See what about us</h2>
+					<!-- H태그는 색상 상속 안됨 -->
+			<div class="testimonials">
+				<div class="testimonial">
+					<img src="imgs/testimonials/test1.png" alt="People" class="testimonial__avatar"/>
+					<div class="testimonial__speech-bubble">
+						<p>You have to keep plugging away. We are all growing. There is no shortcut. You have to put time into it to build an audience</p>
+						<p class="name"><span>-John Gruber<span></p>
+					</div>
 				</div>
-			</div>
-			<div class="testimonial">
-				<div class="testimonial__speech-bubble">
-					<p>Life is as tedious as a twice-told tale, vexing the dull ear of a drowsy man.</p>
-					<p class="name"><a href="">William Shakespeare</a></p>
+				<div class="testimonial">
+					<div class="testimonial__speech-bubble">
+						<p>Life is as tedious as a twice-told tale, vexing the dull ear of a drowsy man.</p>
+						<p class="name"><span>-William Shakespeare<span></p>
+					</div>
+					<img src="imgs/testimonials/test2.png" alt="People" class="testimonial__avatar"/>
 				</div>
-				<img src="imgs/testimonials/test2.png" alt="People" class="testimonial__avatar"/>
-			</div>
+			</div> 
 		</div>
 	</section>
 	<!-- contact -->
@@ -229,7 +234,7 @@
 		<div class="contact__links">
 			<a style=text-decoration:none; href="https://www.facebook.com/haewon.yu.5?mibextid=ZbWKwL" target="_blank">
 				<!-- text-decoreation:none 은 밑줄 없애는 기능 -->
-				<i class="fa-brands fa-facebook" style="color: white"></i>
+				<i class="fa-brands fa-square-facebook" style="color: white"></i>
 			</a>	
 			<a style=text-decoration:none; href="https://github.com/cledow/myPortfolio" target="github">
 				<i class="fa-brands fa-square-github" style="color: white;"></i>
