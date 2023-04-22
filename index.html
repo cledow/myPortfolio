@@ -9,7 +9,7 @@
 	<meta name="author" content="Cledow">
 	<link rel="icon" type="image/png" href="imgs/favicon.png"/>
 	<script src="https://kit.fontawesome.com/c91f1d1d45.js" crossorigin="anonymous"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css" />
 	<script src="main.js" defer></script>  <!--defer: html파싱되는 동안 js다운을 받고 / html 파싱이 완료된 후에 js를 실행--> 
 </head>
@@ -18,38 +18,38 @@
 	<footer id="background">
 		<nav id="navbar">
 			<div class="nav__logo">
-				<img src="imgs/favicon.png" class="rotating_logo"></i>
-				<a href="#">Cledow</a>
+				<img src="imgs/favicon.png" class="rotating_logo"></i>		
+				<span>VIA</span>
 			</div>
 			<ul class="navbar__menu">
 				<li class="navbar__menu__item">Home</li>
 				<li class="navbar__menu__item">About</li>
 				<li class="navbar__menu__item">Skills</li>
-				<li class="navbar__menu__item">My work</li>
+				<li class="navbar__menu__item">Projects</li>
 				<li class="navbar__menu__item">Testimonials</li>
 				<li class="navbar__menu__item">Contact</li>
 			</ul>
 		</nav>
 		<!-- Home -->
 		<section id="home">
-			<img src="imgs/profile.png" alt="My porfile" class="home__avatar">
-			<h1 class="home__title">Programmer, <br/> developing innovation</h1>
-			<h2 class="home__description">A Software engineer liviing in Korea</h2>
-			<button class="home__contact">Contact Us</button>
+			<div class="home__line" style= "width: 40%; border-top:1.5px solid white;"></div>
+			<h1 class="home__title">Programmers, <br/> Sailing over innovation</h1>
+			<h2 class="home__description">We started here!</h2>
+			<button class="home__contact"><span>Contact Us</span></button>
 		</section>
 	</footer>
 		<!-- about -->
-	<section id="about">
-		<h1>About me</h1>
-		<p>Whether you think you can or think you can't, <br/>you're right.</p>
-		<p>-Henry Ford</p>
+	<section id="about" class="section section__container">
+		<h1>About us</h1>
+		<p>A team, greater than any other player.</p>
+		<p>- VIA -</p>
 		<div class="about__majors">
 			<div class="major">
 				<div class="major__icon">
 					<i class="fa-brands fa-html5"></i>
 				</div>
 				<h2 class="major__title">Front-End</h2>
-				<p class="major__description">JavaScript, HTML, CSS</p>
+				<p class="major__description">JavaScript, HTML, CSS, <br/>TypeScript</p>
 			</div>
 			<div class="major">
 				<div class="major__icon">
@@ -65,195 +65,177 @@
 				<h2 class="major__title">Back-end</h2>
 				<p class="major__description">Python, NodeJS, MySQL</p>
 			</div>
-			<div class="about__jobs">
-				<div class="job">
-					<img src="imgs/jobs/navy.png" alt="Naval Academy" class="job__logo">
-					<p class="job__name">Graduated from the Naval Academy</p>
-					<p class="job__period">2011/2 ~ 2015/2</p>
+		</div>
+		<div class="about__jobs">
+			<div class="job">
+				<img src="imgs/jobs/navy.png" alt="Naval Academy" class="job__logo">
+				<div class="job__description">
+					<p class="job__college">Republic of Korea Naval Academy</p>
+					<p class="job__name">Woo</p>
 				</div>
-				<div class="job">
-					<img src="imgs/jobs/marine.png" alt="marine corps" class="job__logo">
-					<p class="job__name">Graduated from the Naval Academy</p>
-					<p class="job__period">2011/2 ~ 2015/2</p>
+			</div>
+			<div class="job">
+				<img src="imgs/jobs/dongkook.png" alt="Dongkook" class="job__logo">
+				<div class="job__description">
+					<p class="job__college">Dongguk University, Department of Computer Science</p>
+					<p class="job__name">Hong</p>
+				</div>
+			</div>
+			<div class="job">
+				<img src="imgs/jobs/san.png" alt="San" class="job__logo">
+				<div class="job__description">
+					<p class="job__college">San Jose State University</p>
+					<p class="job__name">Yu</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- skills -->
-	<section id="skills">
-		<h1>Skills</h1>
-		<h2>Skills & Attributes</h2>
-		<p>
-			Experience with all phases of the software life-cycle. Passion for learning new technologies. Capable of working withing a team
-			environment and independently. Ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.	
-		</p>
-		<div class="skillset">  <!--container-->
-			<div class="skillset__left"></div>
-				<h3 class="skillset__title">Skills</h3>
-				<div class="skill">
-					<div class="skill_description">
-						<span>HTML</span>
-						<span>95%</span>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
+	<section id="skills" class="section">
+		<div class="section__container">
+			<h1 style="color:white">Skills</h1>
+			<h2 style="color:white">Skills & Attributes</h2>
+			<p style="color:white">
+				Passion for learning new technologies.<br/> 
+				Ability to plan and design 
+			</p>
+			<div class="skillset">  <!--container-->
+				<div class="skillset__left">
+					<h3 class="skillset__title">Skills</h3>
+					<div class="skill">
+						<div class="skill__description">
+							<span>HTML/CSS/JS</span>
+							<span>95%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value" style="width:95%"></div>
+						</div>
 					</div>
+					<div class="skill">
+						<div class="skill__description">
+							<span>React</span>
+							<span>80%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value"  style="width:80%"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill__description">
+							<span>Three.js</span>
+							<span>30%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value"  style="width:30%"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill__description">
+							<span>Phython</span>
+							<span>70%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value"  style="width:70%"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<div class="skill__description">
+							<span>Blender</span>
+							<span>10%</span>
+						</div>
+						<div class="skill__bar">
+							<div class="skill__value"  style="width:10%"></div>
+						</div>
 					</div>
 				</div>
-				<div class="skill">
-					<div class="skill_description">
-						<span>CSS</span>
-						<span>90%</span>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
+				<div class="skillset__right">
+					<div class="tools">
+						<h3 class="skillset__title">Tools</h3>
+						<ul class="tools__list">
+							<li><span>Visual Studio Code</span></li>
+							<li><span>Pycharm</span></li>
+							<li><span>Blender</span></li>
+							<li><span>Git Hub</span></li>
+						</ul>
 					</div>
-					</div>
-				</div>
-				<div class="skill">
-					<div class="skill_description">
-						<span>JavaScript</span>
-						<span>95%</span>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
-					</div>
-				</div>
-				<div class="skill">
-					<div class="skill_description">
-						<span>Phython</span>
-						<span>99%</span>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
+					<div class="etc">
+						<h3 class="skillset__title">Etc</h3>
+						<ul class="etc__list">
+							<li><span>Notion</span></li>
+							<li><span>Google form</span></li>
+						</ul>
 					</div>
 				</div>
-				<div class="skill">
-					<div class="skill_description">
-						<span>React</span>
-						<span>80%</span>
-					<div class="skill__bar">
-						<div class="skill__value"></div>
-					</div>
-					</div>
-				</div>
-			<div class="skillset__right">
-				<div class="tools"></div>
-					<h3 class="skillset__title">Tools</h3>
-					<ul class="tools__list"></div>
-						<li><span>Visual Studio Code</span></li>
-						<li><span>IntelliJ</span></li>
-						<li><span>Android Studio Code</span></li>
-						<li><span>IOS development tools</span></li>
-						<li><span>Sketch app</span></li>
-				<div class="etc"></div>
-				<h3 class="skillset__title">Etc</h3>
-				<ui class="etc__list">
-					<li><span>Git</span></li>
-					<li><span>Planning</span></li>
-					<li><span>Swimming</span></li>
-				</ui>
 			</div>
 		</div>
 	</section>
 	<!-- work -->
-	<section id="work">	
-		<h1>My work</h1>
-		<h3>Projects</h3>
-		<div class="work__categories">
-			<button class="category__btn">All<span class="category__count">8</span></button>
-			<button class="category__btn">Front-end<span class="category__count">3</span></button>
-			<button class="category__btn">Back-end<span class="category__count">3</span></button>
-			<button class="category__btn">Mobile<span class="category__count">2</span></button>
+	<section id="work" class="section">	
+		<h1>Our Projects</h1>
+		<h3>In Progress</h3>
+		<div class="progress">
+			<i class="fa-solid fa-compact-disc fa-spin fa-2x"></i>
 		</div>
 		<div class="work__projects">
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img src="imgs/projects/project1.png" alt="Youtube">
+			<div class="work__categories">
+				<button class="category__btn btn-set"><span>Fatigue cap</span></button>
+				<img class="project__img" src="imgs/projects/project1.png" alt="Fatigue cap">
 				<div class="project__description">
-					<h3>Youtube Site</h3>
-					<span>Clone coding</span>
+					<h3>For discharged soldiers</h3>
 				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project2.png" alt="Naver">
+			</div>
+			<div class="work__categories">
+				<button class="category__btn btn-set"><span>Web-sites</span></button>
+				<img class="project__img" src="imgs/projects/project2.png" alt="Web-sites">
 				<div class="project__description">
-					<h3>Naver Site</h3>
-					<span>Clone coding</span>
+					<h3>Creating web</h3>
 				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project3.png" alt="Blog">
+			</div>
+			<div class="work__categories">
+				<button class="category__btn btn-set"><span>Application</span></button>
+				<img class="project__img" src="imgs/projects/project3.png" alt="Application">
 				<div class="project__description">
-					<h3>Blog Site</h3>
-					<span>Clone coding</span>
+					<h3>Hobby-reservation App</h3>
 				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project4.png" alt="Daum">
-				<div class="project__description">
-					<h3>Daum Site</h3>
-					<span>Clone coding</span>
-				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project5.png" alt="Kakao">
-				<div class="project__description">
-					<h3>Kakao Site</h3>
-					<span>Clone coding</span>
-				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project6.png" alt="Git">
-				<div class="project__description">
-					<h3>Git Site</h3>
-					<span>Clone coding</span>
-				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project7.png" alt="Google">
-				<div class="project__description">
-					<h3>Google Site</h3>
-					<span>Clone coding</span>
-				</div>
-			</a>
-			<a href="https://github.com/dream-ellie/youtube-site" class="project" target="blank"> <!--target:blank 새창-->
-				<img class="project__img" src="imgs/projects/project8.png" alt="Notion">
-				<div class="project__description">
-					<h3>Notion</h3>
-					<span>Clone coding</span>
-				</div>
-			</a>
+			</div>
 		</div>
 	</section>
 	<!-- testimonials -->
-	<section id="testimonials">
-		<h1>Testimonials</h1>
-		<h3>See what about me</h3>
+	<section id="testimonials"  class="section">
+		<h1 style="color: white;">Testimonials</h1>
+		<h3 style="color: white;">See what about us</h3>
+				<!-- H태그는 색상 상속 안됨 -->
 		<div class="testimonials">
 			<div class="testimonial">
 				<img src="imgs/testimonials/test1.png" alt="People" class="testimonial__avatar"/>
 				<div class="testimonial__speech-bubble">
-					<p>You have to keep plugging away. We are all growing. <br/>There is no shortcut. <br/>You have to put time into it to build an audience</p>
+					<p>You have to keep plugging away. We are all growing. There is no shortcut. You have to put time into it to build an audience</p>
 					<p class="name"><a href="">John Gruber</a></p>
 				</div>
 			</div>
 			<div class="testimonial">
-				<img src="imgs/testimonials/test2.png" alt="People" class="testimonial__avatar"/>
 				<div class="testimonial__speech-bubble">
-					<p>Life is as tedious as a twice-told tale, <br/>vexing the dull ear of a drowsy man.</p>
+					<p>Life is as tedious as a twice-told tale, vexing the dull ear of a drowsy man.</p>
 					<p class="name"><a href="">William Shakespeare</a></p>
 				</div>
+				<img src="imgs/testimonials/test2.png" alt="People" class="testimonial__avatar"/>
 			</div>
 		</div>
 	</section>
 	<!-- contact -->
-	<section id="contact">
+	<section id="contact" class="section">
 		<h1 class="contact__title">Lets'talk</h1>
 		<h2 class="contact__email">mist00966@gmail.com</h2>
 		<div class="contact__links">
-			<a href="https://github.com/cledow/myPortfolio" target="_blank">
-				<i class="fa-brands fa-github"></i>
+			<a style=text-decoration:none; href="https://www.facebook.com/haewon.yu.5?mibextid=ZbWKwL" target="_blank">
+				<!-- text-decoreation:none 은 밑줄 없애는 기능 -->
+				<i class="fa-brands fa-facebook" style="color: white"></i>
+			</a>	
+			<a style=text-decoration:none; href="https://github.com/cledow/myPortfolio" target="github">
+				<i class="fa-brands fa-square-github" style="color: white;"></i>
 			</a>
-			<a href="#" target="_blank">
-				<i class="fa-brands fa-instagram"></i>
+			<a style=text-decoration:none; href="https://www.linkedin.com/in/sunny-yu-53a7b624" target="linkedin">
+				<i class="fa-brands fa-linkedin" style="color: white;"></i>
 			</a>
 		</div>
 		<p class="contact__rights">2023 Portfolio practice - All rights reserved</p>
