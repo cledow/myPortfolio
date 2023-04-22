@@ -3,7 +3,15 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
-
-const scrollTO = document.querySelector(link);
-scrollTO.scrollIntoView({behavior: "smooth"});
+  scrollIntoViews(link);
 })
+
+const contactUs = document.querySelector('.home__contact');
+contactUs.addEventListener("click", () => {
+  scrollIntoViews('#contact');
+})
+
+function scrollIntoViews(selector) {
+  const scrollTO = document.querySelector(selector);
+  scrollTO.scrollIntoView({behavior: "smooth"});
+} 
