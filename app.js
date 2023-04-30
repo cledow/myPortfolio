@@ -47,7 +47,7 @@ document.addEventListener('scroll', () => {
 
 // test
 const targets = document.querySelectorAll(".section");
-const options = { root: null, threshold: 0.15, rootMargin: "0px" };
+const options = { root: null, threshold: 0.16, rootMargin: "0px" };
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
     const container = entry.target;
