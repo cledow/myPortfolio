@@ -194,7 +194,7 @@ ul {
 
 .home__contact {
 	position: relative;
-	top : 60px;
+	top : 100px;
 	font-size: 1.5vw;
 	cursor: pointer;
 	margin: 30px;
@@ -642,7 +642,7 @@ ul {
 	#navbar {
 		flex-direction: column;
 		align-items: flex-start;
-		margin-bottom: 60px;
+		margin-bottom: 0px;
 	}
 
 	.navbar__menu {
@@ -654,11 +654,23 @@ ul {
 	
 	}
 
-
+	#home {
+		padding-top: 0;
+		padding-bottom : 0;
+	}
 	.navbar__menu.open {
 		display: block; 
 	}
 
+	.home__description {
+		padding-bottom : 0;
+		margin-bottom : 0;
+		padding-top : 0;
+	}
+
+	.home__contact {
+		top : -15px;
+	}
 	/* 모바일 패딩은 보통 16px */
 	.section {
 		padding : 16px;
