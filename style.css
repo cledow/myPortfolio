@@ -158,7 +158,6 @@ ul {
 	background-repeat: no-repeat;
 	background: url("imgs/home-background.png") center/cover no-repeat;
 	height: 100vh;
-	/* center/cover : 가운데에 두면서 반응형으로 */
 	animation: fadein 3s ease 3s;
   	-webkit-animation: fadein 3s;
 }
@@ -231,7 +230,10 @@ ul {
 }
 
 .fade-in {
+	justify-content: center;
+	align-items: center;
 	opacity: 1;
+	margin : 0 auto;
 }
 
 .section__contanier {
@@ -672,6 +674,10 @@ ul {
 	 .major{
 		margin-top: 20px;
 		margin-bottom : 20px;
+	 }
+	 
+	 .about__majors {
+		margin : 0 auto;
 	 }
 
 	.job {
