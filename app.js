@@ -3,7 +3,11 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
-  scrollIntoViews(link);
+  if (link === "#home") {
+    scrollIntoViews("#navbar");
+  } else {
+    scrollIntoViews(link);
+  }
 })
 
 //Navbar toggle button for small screen
@@ -24,23 +28,42 @@ contactUs.addEventListener("click", () => {
 })
 
 // Make home slowly fade to transparent as the widow scrolls down.
-  const home = document.querySelector('#home');
-  const homeHeight = home.getBoundingClientRect().height;
-  document.addEventListener('scroll', () => {
-    home.style.opacity = 1- window.scrollY/homeHeight;
-  })
 
-// const trans = document.querySelectorAll('.navbar__menu li');
-// console.log(trans[0].getAttribute('data-link'));
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1- window.scrollY/homeHeight;
+})
 
-// for (let i = 0; i < trans.length; i++) {
-//   const transItem = trans[i].getAttribute('data-link');
-//   const item = document.querySelector(transItem);
-//   const itemHeight = item.getBoundingClientRect().height;
-//   document.addEventListener('scroll', () => {
-//     item.style.opacity = 1- window.scrollY/itemHeight;
-//   })
-// }
+// const aboutHeight = about.getBoundingClientRect().height;
+// document.addEventListener('scroll', () => {
+//   if (aboutHeight < window.scrollY) {
+//     about.style.opacity = 1 - window.scrollY / (homeHeight + aboutHeight);
+//   } else if (parseInt(window.scrollY) > 1026) {
+//     skills.classList.add('.active')
+//   } else {
+//     about.style.opacity = 1
+//   }
+// })
+
+// test
+const targets = document.querySelectorAll(".section");
+const options = { root: null, threshold: 0.15, rootMargin: "0px" };
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    const container = entry.target;
+    if (entry.isIntersecting) {
+      container.classList.add("fade-in");
+    } else {
+      container.classList.remove("fade-in");
+    }
+    
+  });
+}, options);
+
+targets.forEach((target) => {
+  observer.observe(target);
+});
+
 
 //show "arrow up" button when scrolling down
 const arrowUp = document.querySelector('.arrow-up');
@@ -54,7 +77,6 @@ document.addEventListener('scroll', () => {
 
 arrowUp.addEventListener("click", () => {
   scrollIntoViews('#navbar')
-})
+});
 
-
-
+//project hovering

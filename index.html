@@ -11,7 +11,7 @@
 	<script src="https://kit.fontawesome.com/c91f1d1d45.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css" />
-	<script src="main.js" defer></script>  <!--defer: html파싱되는 동안 js다운을 받고 / html 파싱이 완료된 후에 js를 실행--> 
+	<script src="app.js" defer></script>  <!--defer: html파싱되는 동안 js다운을 받고 / html 파싱이 완료된 후에 js를 실행--> 
 </head>
 <body>
 	<!-- nav bar -->
@@ -26,7 +26,7 @@
 				<li class="navbar__menu__item" data-link="#about">About</li>
 				<li class="navbar__menu__item" data-link="#skills">Skills</li>
 				<li class="navbar__menu__item" data-link="#projects">Projects</li>
-				<li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+				<li class="navbar__menu__item" data-link="#testimonials">Introduction</li>
 				<li class="navbar__menu__item" data-link="#contact">Contact</li>
 			</ul>		<!-- Toogle button -->
 			<button class="navbar__toggle-btn">
@@ -36,7 +36,7 @@
 		<!-- Home -->
 		<section id="home">
 			<div class="home__line" style= "width: 40%; border-top:1.5px solid white;"></div>
-			<h1 class="home__title">Programmers, <br/> Sailing over innovation</h1>
+			<h1 class="home__title">Programmers, <br/> Sailing over innovation.</h1>
 			<h2 class="home__description">We started here!</h2>
 			<button class="home__contact"><span>Contact us</span></button>
 		</section>
@@ -45,21 +45,14 @@
 	<section id="about" class="section section__container">
 		<h1>About us</h1>
 		<h2>A team, greater than any other player.</h2>
-		<p>- VIA -</p>
+		<p class="name">- VIA -</p>
 		<div class="about__majors">
 			<div class="major">
 				<div class="major__icon">
 					<i class="fa-brands fa-html5"></i>
 				</div>
 				<h2 class="major__title">Front-End</h2>
-				<div class="major__description">JavaScript, HTML, CSS, <br/>TypeScript</div>
-			</div>
-			<div class="major">
-				<div class="major__icon">
-					<i class="fa-solid fa-mobile"></i>
-				</div>
-				<h2 class="major__title">Mobile</h2>
-				<div class="major__description">React Native, Java</div>
+				<div class="major__description">JavaScript, HTML, CSS, <br/>React, Next js</div>
 			</div>
 			<div class="major">
 				<div class="major__icon">
@@ -67,6 +60,13 @@
 				</div>
 				<h2 class="major__title">Back-end</h2>
 				<div class="major__description">Python, NodeJS, MySQL</div>
+			</div>
+			<div class="major">
+				<div class="major__icon">
+					<i class="fa-solid fa-cube"></i>
+				</div>
+				<h2 class="major__title">3D modeling</h2>
+				<div class="major__description">Three js, Blender</div>
 			</div>
 		</div>
 		<div class="about__jobs">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div class="job">
-				<img src="imgs/jobs/dongkook.png" alt="Dongkook" class="job__logo">
+				<img src="imgs/jobs/dongguk.png" alt="Dongguk" class="job__logo">
 				<div class="job__description">
 					<p class="job__college">Dongguk University, Department of Computer Science</p>
 					<p class="job__name">Hong</p>
@@ -96,9 +96,9 @@
 	<!-- skills -->
 	<section id="skills" class="section">
 		<div class="section__container">
-			<h1 style="color:white">Skills</h1>
-			<h2 style="color:white">Skills & Attributes</h2>
-			<h3 style="color:white">
+			<h1>Skills</h1>
+			<h2>Skills & Attributes</h2>
+			<h3>
 				Passion for learning new technologies.<br/> 
 				Ability to plan and design 
 			</h3>
@@ -108,10 +108,10 @@
 					<div class="skill">
 						<div class="skill__description">
 							<span>HTML/CSS/JS</span>
-							<span>95%</span>
+							<span>90%</span>
 						</div>
 						<div class="skill__bar">
-							<div class="skill__value" style="width:95%"></div>
+							<div class="skill__value" style="width:90%"></div>
 						</div>
 					</div>
 					<div class="skill">
@@ -125,29 +125,29 @@
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>Three.js</span>
-							<span>30%</span>
+							<span>Python</span>
+							<span>60%</span>
 						</div>
 						<div class="skill__bar">
-							<div class="skill__value"  style="width:30%"></div>
+							<div class="skill__value"  style="width:60%"></div>
 						</div>
 					</div>
 					<div class="skill">
 						<div class="skill__description">
-							<span>Phython</span>
-							<span>70%</span>
+							<span>Three.js</span>
+							<span>50%</span>
 						</div>
 						<div class="skill__bar">
-							<div class="skill__value"  style="width:70%"></div>
+							<div class="skill__value"  style="width:50%"></div>
 						</div>
 					</div>
 					<div class="skill">
 						<div class="skill__description">
 							<span>Blender</span>
-							<span>10%</span>
+							<span>20%</span>
 						</div>
 						<div class="skill__bar">
-							<div class="skill__value"  style="width:10%"></div>
+							<div class="skill__value"  style="width:20%"></div>
 						</div>
 					</div>
 				</div>
@@ -191,7 +191,7 @@
 				<button class="category__btn btn-set"><span>Web-sites</span></button>
 				<img class="project__img" src="imgs/projects/project2.png" alt="Web-sites">
 				<div class="project__description">
-					<h3>Creating web</h3>
+					<h3>Portfolio web</h3>
 				</div>
 			</div>
 			<div class="work__categories">
@@ -206,30 +206,36 @@
 	<!-- testimonials -->
 	<section id="testimonials"  class="section">
 		<div class="section__container">
-			<h1 style="color: white;">Testimonials</h1>
-			<h2 style="color: white;">See what about us</h2>
+			<h1>Introduction</h1>
 					<!-- H태그는 색상 상속 안됨 -->
 			<div class="testimonials">
 				<div class="testimonial">
-					<img src="imgs/testimonials/test1.png" alt="People" class="testimonial__avatar"/>
+					<img src="imgs/testimonials/Woo.jpg" alt="People" class="testimonial__avatar"/>
 					<div class="testimonial__speech-bubble">
-						<p>You have to keep plugging away. We are all growing. There is no shortcut. You have to put time into it to build an audience</p>
-						<p class="name"><span>-John Gruber<span></p>
+						<p>Whether you think you can or think you can't, you're right.</p>
+						<p class="name"><span>- Woo, Chief Operating Officer.<span></p>
 					</div>
 				</div>
 				<div class="testimonial">
 					<div class="testimonial__speech-bubble">
-						<p>Life is as tedious as a twice-told tale, vexing the dull ear of a drowsy man.</p>
-						<p class="name"><span>-William Shakespeare<span></p>
+						<p>Your unconscious mind will one day come in the name of fate.</p>
+						<p class="name"><span>- Hong, Chief Executive Officer.<span></p>
 					</div>
-					<img src="imgs/testimonials/test2.png" alt="People" class="testimonial__avatar"/>
+					<img src="imgs/testimonials/Hong.jpg" alt="People" class="testimonial__avatar"/>
+				</div>
+				<div class="testimonial">
+					<img src="imgs/testimonials/Yu.jpg" alt="People" class="testimonial__avatar"/>
+					<div class="testimonial__speech-bubble">
+						<p>If you need to justify your actions, they are all excuses.</p>
+						<p class="name"><span>- Yu, Designer.<span></p>
+					</div>
 				</div>
 			</div> 
 		</div>
 	</section>
 	<!-- contact -->
 	<section id="contact" class="section">
-		<h1 class="contact__title">Let's talk</h1>
+		<h1 class="contact__title">Contact Us</h1>
 		<div class="contact__links">
 			<a style=text-decoration:none; href="https://www.facebook.com/haewon.yu.5?mibextid=ZbWKwL" target="_blank">
 				<!-- text-decoreation:none 은 밑줄 없애는 기능 -->
@@ -247,7 +253,7 @@
 	</section>
 	<!-- Arrow up -->
 	<button class="arrow-up">
-		<i class="fa-solid fa-circle-chevron-up" style="color: #1f0627;"></i>
+		<i class="fa-regular fa-circle-up" style="color: #000;"></i>
 	</button>
-</body>
+</body> 
 </html>
