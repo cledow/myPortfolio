@@ -31,7 +31,7 @@ contactUs.addEventListener("click", () => {
 
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  home.style.opacity = 1- window.scrollY/homeHeight;
+  home.style.opacity = 1.1- window.scrollY/homeHeight;
 })
 
 // const aboutHeight = about.getBoundingClientRect().height;
@@ -45,9 +45,9 @@ document.addEventListener('scroll', () => {
 //   }
 // })
 
-// test
+// intersection observer api (단점 : 내가 원하도록 투명도 조절이 어려움)
 const targets = document.querySelectorAll(".section");
-const options = { root: null, threshold: 0.16, rootMargin: "0px" };
+const options = { root: null, threshold: 0.23, rootMargin: "0px" };
 const observer = new IntersectionObserver(function (entries, observer) {
   entries.forEach((entry) => {
     const container = entry.target;
